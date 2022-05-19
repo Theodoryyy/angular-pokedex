@@ -1,0 +1,16 @@
+$theme-colors: (
+  "primary": rgb(202, 45, 45),
+  "secondary": rgb(129, 129, 129),
+  "success": rgb(44, 221, 124),
+  "danger": rgb(231, 78, 78),
+  "info": rgb(63, 206, 216),
+  "warning": rgb(224, 210, 79),
+);
+
+$custom-colors: (
+  "fire": rgb(243, 150, 10),
+);
+
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+$min-contrast-ratio: 1.55 !default;
