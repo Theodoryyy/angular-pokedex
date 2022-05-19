@@ -5,16 +5,18 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RoutePokemonListComponent } from './routes/route-pokemon-list/route-pokemon-list.component';
 import { RoutePokemonComponent } from './routes/route-pokemon/route-pokemon.component';
+import { CompPokemonListComponent } from './comps/comp-pokemon-list/comp-pokemon-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RoutePokemonListComponent,
-    RoutePokemonComponent
+    RoutePokemonComponent,
+    CompPokemonListComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
