@@ -7,7 +7,10 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let pokemon of list; let i = index" (click)="openPokemon(i + 1)">
+      <tr
+        *ngFor="let pokemon of list; let i = index"
+        (click)="openPokemon(i + 1)"
+      >
         <th scope="row">{{ i + 1 }}</th>
         <td>{{ pokemon.name }}</td>
       </tr>

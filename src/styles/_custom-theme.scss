@@ -12,7 +12,24 @@ $theme-colors: (
 
 $custom-colors: (
   "pokeblue": $pokeblue,
-  "fire": rgb(243, 150, 10),
+
+  "typedragon": rgb(61, 116, 129),
+  "typefight": rgb(219, 72, 72),
+  "typeghost": rgb(67, 19, 179),
+  "typepoison": rgb(161, 51, 224),
+  "typebug": rgb(99, 129, 51),
+  "typewater": rgb(27, 107, 199),
+  "typegrass": rgb(48, 218, 33),
+  "typefire": rgb(243, 150, 10),
+  "typeice": rgb(141, 238, 238),
+  "typerock": rgb(114, 105, 93),
+  "typenormal": rgb(150, 150, 150),
+  "typeflying": rgb(113, 191, 211),
+  "typesteel": rgb(209, 209, 209),
+  "typedark": rgb(34, 34, 34),
+  "typepsychic": rgb(255, 50, 221),
+  "typeelectric": rgb(243, 239, 10),
+  "typefairy": rgb(255, 130, 192),
 );
 
 $theme-colors: map-merge($theme-colors, $custom-colors);

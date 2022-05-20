@@ -1,1 +1,23 @@
-<p>route-pokemon works!</p>
+<div class="d-flex justify-content-center">
+
+  <div *ngIf="pokemon" class="card" style="max-width: 500px">
+    <div class="text-center">
+      <div class="card-header">
+        <h1>{{ pokemon.name }}</h1>
+      </div>
+
+      <div [ngClass]="'bg-type' + pokemon.types[0].type.name">
+        <img src="{{ pokemon.sprites.other.home.front_default }}" width="100%" />
+      </div>
+      <div class="card-body">
+        <div class="mt-3">
+          <span class="fw-bold">Type:</span>
+          <span *ngFor="let tipo of pokemon.types" class="badge bg-dark ms-2">{{
+            tipo.type.name
+          }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
