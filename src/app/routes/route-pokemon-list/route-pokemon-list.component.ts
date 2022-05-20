@@ -7,7 +7,8 @@ import { ServPokeapiService } from 'src/app/services/serv-pokeapi/serv-pokeapi.s
   styleUrls: ['./route-pokemon-list.component.scss'],
 })
 export class RoutePokemonListComponent implements OnInit {
-  public pokemonList: any;
+  public nextPage: string = '';
+  public pokemonList: any = [];
 
   constructor(private servPokeapi: ServPokeapiService) {}
 
@@ -18,7 +19,12 @@ export class RoutePokemonListComponent implements OnInit {
   private getPokemonList(link: string) {
     this.servPokeapi.getData(link, (res: any) => {
       console.log(res);
-      this.pokemonList = res.results;
+      this.nextPage = res.next;
+      this.pokemonList = this.pokemonList.concat(res.results);
     });
+  }
+
+  public loadMore(nextPage: string) {
+    this.getPokemonList(nextPage);
   }
 }
