@@ -12,11 +12,11 @@ export class RoutePokemonListComponent implements OnInit {
   constructor(private servPokeapi: ServPokeapiService) {}
 
   ngOnInit(): void {
-    this.getPokemonList();
+    this.getPokemonList('https://pokeapi.co/api/v2/pokemon');
   }
 
-  private getPokemonList() {
-    this.servPokeapi.getData('pokemon', (res: any) => {
+  private getPokemonList(link: string) {
+    this.servPokeapi.getData(link, (res: any) => {
       console.log(res);
       this.pokemonList = res.results;
     });
