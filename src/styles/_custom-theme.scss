@@ -3,7 +3,7 @@ $poketwo: #5c9edd;
 
 $theme-colors: (
   "primary": rgb(202, 45, 45),
-  "secondary": rgb(129, 129, 129),
+  "secondary": rgb(204, 204, 204),
   "success": rgb(44, 221, 124),
   "danger": rgb(231, 78, 78),
   "info": rgb(63, 206, 216),
@@ -12,6 +12,8 @@ $theme-colors: (
 
 $custom-colors: (
   "pokeblue": $pokeblue,
+
+  "listcolor": rgb(240, 240, 240),
 
   "typedragon": #6F35FC,
   "typefight": #C22E28,
