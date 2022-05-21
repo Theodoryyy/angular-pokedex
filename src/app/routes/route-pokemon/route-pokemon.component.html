@@ -12,7 +12,7 @@
       <div class="card-body">
         <div class="mt-3">
           <span class="fw-bold">Type:</span>
-          <span *ngFor="let tipo of pokemon.types" class="badge bg-dark ms-2">{{
+          <span *ngFor="let tipo of pokemon.types" class="ms-2" [ngClass]="'badge bg' + pokemon.types[0].type.name">{{
             tipo.type.name
           }}</span>
         </div>
