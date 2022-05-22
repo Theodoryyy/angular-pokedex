@@ -1,8 +1,11 @@
 <div class="d-flex justify-content-center">
   <div *ngIf="pokemon" class="card" style="max-width: 500px">
+    <app-header></app-header>
     <div class="text-center">
       <div class="card-header">
-        <h1 class="text-capitalize">{{ pokemon.name }}</h1>
+        <h2 class="text-capitalize">
+          {{ pokemon.name }}
+        </h2>
       </div>
 
       <div [ngClass]="'bg-type' + pokemon.types[0].type.name">
@@ -23,7 +26,9 @@
         </div>
         <div class="card bg-listcolor">
           <div class="card-header fw-bold bg-secondary">Moves</div>
-          <table class="table table-sm table-striped table-hover table-borderless">
+          <table
+            class="table table-sm table-striped table-hover table-borderless"
+          >
             <thead>
               <tr>
                 <th scope="col">#</th>

@@ -12,7 +12,8 @@ export class RoutePokemonComponent implements OnInit {
 
   constructor(
     private activatedRoute: ActivatedRoute,
-    private servPokeapi: ServPokeapiService
+    private servPokeapi: ServPokeapiService,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -27,4 +28,5 @@ export class RoutePokemonComponent implements OnInit {
       this.pokemon = res;
     });
   }
+
 }

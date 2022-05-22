@@ -8,6 +8,7 @@ import { RoutePokemonComponent } from './routes/route-pokemon/route-pokemon.comp
 import { CompPokemonListComponent } from './comps/comp-pokemon-list/comp-pokemon-list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CompIntroComponent } from './comps/comp-pokemon-list/comp-intro/comp-intro.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { CompIntroComponent } from './comps/comp-pokemon-list/comp-intro/comp-in
     RoutePokemonComponent,
     CompPokemonListComponent,
     CompIntroComponent,
+    HeaderComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
