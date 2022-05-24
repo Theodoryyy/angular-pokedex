@@ -1,11 +1,13 @@
 <div class="d-flex justify-content-center">
-  <div *ngIf="pokemon" class="card" style="width: 475px;">
+  <div *ngIf="pokemon" class="card" style="width: 475px">
     <app-header></app-header>
     <div class="text-center">
-      <div class="card-header">
-        <h2 class="text-capitalize">
-          {{ pokemon.name }}
-        </h2>
+      <div class="card-header navbar">
+          <h1 class="fa fa-chevron-left col"></h1>
+          <h2 class="text-capitalize col">
+            {{ pokemon.name }}
+          </h2>
+          <h1 class="fa fa-chevron-right col"></h1>
       </div>
 
       <div [ngClass]="'bg-type' + pokemon.types[0].type.name">

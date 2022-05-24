@@ -28,5 +28,4 @@ export class RoutePokemonComponent implements OnInit {
       this.pokemon = res;
     });
   }
-
 }
