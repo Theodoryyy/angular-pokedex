@@ -28,4 +28,7 @@ export class RoutePokemonComponent implements OnInit {
       this.pokemon = res;
     });
   }
+  public changePokemon(id: any) {
+    this.router.navigateByUrl('pokemon/' + id);
+  }
 }

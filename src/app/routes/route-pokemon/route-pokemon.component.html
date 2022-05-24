@@ -3,11 +3,15 @@
     <app-header></app-header>
     <div class="text-center">
       <div class="card-header navbar">
-          <h1 class="fa fa-chevron-left col"></h1>
-          <h2 class="text-capitalize col">
-            {{ pokemon.name }}
-          </h2>
-          <h1 class="fa fa-chevron-right col"></h1>
+        <button class="btn btn-sm btn-primary" (click)="changePokemon(pokemon.id - 1)">
+          <i class="fa fa-chevron-left"></i>
+        </button>
+        <span class="text-capitalize fs-2 fw-bold">
+          {{ pokemon.name }}
+        </span>
+        <button class="btn btn-sm btn-primary" (click)="changePokemon(pokemon.id + 1)">
+          <i class="fa fa-chevron-right"></i>
+        </button>
       </div>
 
       <div [ngClass]="'bg-type' + pokemon.types[0].type.name">
