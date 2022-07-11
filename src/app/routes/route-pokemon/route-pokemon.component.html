@@ -1,18 +1,18 @@
+<app-header></app-header>
 <div class="d-flex justify-content-center">
-  <div *ngIf="pokemon" class="card" style="width: 475px">
-    <app-header></app-header>
+  <div *ngIf="pokemon" class="card border-light" style="width: 50%; max-width: 500px;">
+    <div class="navbar">
+      <button class="btn btn-sm btn-black ms-2" (click)="changePokemon(pokemon.id - 1)">
+        <i class="fa fa-chevron-left"></i>
+      </button>
+      <span class="text-capitalize fs-2 fw-bold">
+        {{ pokemon.name }}
+      </span>
+      <button class="btn btn-sm btn -black me-2" (click)="changePokemon(pokemon.id + 1)">
+        <i class="fa fa-chevron-right"></i>
+      </button>
+    </div>
     <div class="text-center">
-      <div class="card-header navbar">
-        <button class="btn btn-sm btn-primary" (click)="changePokemon(pokemon.id - 1)">
-          <i class="fa fa-chevron-left"></i>
-        </button>
-        <span class="text-capitalize fs-2 fw-bold">
-          {{ pokemon.name }}
-        </span>
-        <button class="btn btn-sm btn-primary" (click)="changePokemon(pokemon.id + 1)">
-          <i class="fa fa-chevron-right"></i>
-        </button>
-      </div>
 
       <div [ngClass]="'bg-type' + pokemon.types[0].type.name">
         <img
